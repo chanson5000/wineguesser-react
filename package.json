@@ -1,0 +1,15 @@
+{
+  "name": "wineguesser-react",
+  "version": "1.0.0",
+  "description": "Application for guessing wine varietals.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "wineguesser-react"
+  },
+  "author": "Cory Hanson",
+  "license": "MIT"
+}

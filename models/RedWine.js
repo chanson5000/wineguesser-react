@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const redWineSchema = new mongoose.Schema({
+const RedWineSchema = new mongoose.Schema({
     // These fields are applicable to red and white wines.
     varietal: {
         type: String,
@@ -10,15 +10,9 @@ const redWineSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    description: {
-        type: String
-    },
-    notes: {
-        type: String
-    },
-    commonConfusion: {
-        type: String
-    },
+    description: String,
+    notes: String,
+    commonConfusion: String,
 
     // This is the structure of our descriptors unique to red wines.
     // They are number based, where:
@@ -230,4 +224,4 @@ const redWineSchema = new mongoose.Schema({
 });
 
 // Export this model.
-module.exports = mongoose.model("RedWine", redWineSchema);
+module.exports = mongoose.model("RedWine", RedWineSchema);

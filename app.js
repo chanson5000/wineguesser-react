@@ -1,7 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const passport = require('passport');
+// const passport = require('passport');
+
+const redWines = require('./routes/api/wines/red');
+const whiteWines = require('./routes/api/wines/white');
 
 const app = express();
 
@@ -13,11 +16,13 @@ app.use(bodyParser.json());
 
 // Passport will be used later
 // Passport middleware
-app.use(passport.initialize());
+// app.use(passport.initialize());
 // Passport config
 require('./config/passport')(passport);
 
-// TODO: Setup routes
+// Our routes
+app.use('/api/wines/red', redWines);
+app.use('/api/wines/white', whiteWines);
 
 // When building on Cloud9 instance this value will change.
 const ip = "172.31.17.32";

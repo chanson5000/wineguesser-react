@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
     WhiteWine.find()
         .then(wines => res.json(wines))
         .catch((err) => {
-            console.err(err);
+            console.error(err);
             errors.nowinesfound = 'No Wines Found.';
             res.status(404).json(errors);
         });

@@ -202,5 +202,4 @@ const WhiteWineSchema = new mongoose.Schema({
     }
 });
 
-// Export this model.
-module.exports = mongoose.model('WhiteWine', WhiteWineSchema);
+module.exports.WhiteWine = mongoose.model("WhiteWine", WhiteWineSchema);

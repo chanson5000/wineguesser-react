@@ -20,55 +20,43 @@ const RedWineSchema = new mongoose.Schema({
     // 1 = Is a descriptor of a wine.
     // 3 = Is a descriptor and a key indicator of a wine.
     descriptors: {
-        garnet: {
+        colorGarnet: {
             type: Number,
             default: 0
         },
-        ruby: {
+        colorRuby: {
             type: Number,
             default: 0
         },
-        purple: {
+        colorPurple: {
             type: Number,
             default: 0
         },
-        redFruit: {
+        fruitRed: {
             type: Number,
             default: 0
         },
-        blackFruit: {
+        fruitBlack: {
             type: Number,
             default: 0
         },
-        blueFruit: {
+        fruitBlue: {
             type: Number,
             default: 0
         },
-        noseTart: {
+        characterTart: {
             type: Number,
             default: 0
         },
-        noseRipe: {
+        characterRipe: {
             type: Number,
             default: 0
         },
-        noseOverripe: {
+        characterOverripe: {
             type: Number,
             default: 0
         },
-        noseBaked: {
-            type: Number,
-            default: 0
-        },
-        palateRipe: {
-            type: Number,
-            default: 0
-        },
-        palateOverripe: {
-            type: Number,
-            default: 0
-        },
-        palateBaked: {
+        characterBaked: {
             type: Number,
             default: 0
         },
@@ -122,7 +110,7 @@ const RedWineSchema = new mongoose.Schema({
         },
         coffee: {
             type: Number,
-            defaul: 0
+            default: 0
         },
         cocoa: {
             type: Number,
@@ -223,5 +211,4 @@ const RedWineSchema = new mongoose.Schema({
     }
 });
 
-// Export this model.
-module.exports = mongoose.model("RedWine", RedWineSchema);
+module.exports.RedWine = mongoose.model("RedWine", RedWineSchema);

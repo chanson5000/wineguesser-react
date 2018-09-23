@@ -16,20 +16,20 @@ router.get('/test', (req, res) => res.json({msg: "This route works."}));
 // @access  Public
 
 router.get('/', (req, res) => {
-    const errors = {};
+  const errors = {};
 
-    RedWine.find({})
-        .then(redWines => {
-            if (!redWines.isEmpty()) {
-                res.json(redWines);
-            } else {
-                errors.nowinesfound = 'No Wines Found.';
-            }
-        })
-        .catch((err) => {
-            console.error(err);
-            res.status(404).json(err);
-        });
+  RedWine.find({})
+      .then(redWines => {
+        if (!redWines.isEmpty()) {
+          res.json(redWines);
+        } else {
+          errors.nowinesfound = 'No Wines Found.';
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(404).json(err);
+      });
 });
 
 // @rout    GET api/wines/red/:id
@@ -37,21 +37,21 @@ router.get('/', (req, res) => {
 // @access  Public
 
 router.get('/:id', (req, res) => {
-    const errors = {};
-    const id = req.params.id;
-    RedWine.findById(id)
-        .then(wine => {
-            res.json(wine);
-        })
-        .catch((err) => {
-            if (err.varietal === 'CastError') {
-                errors.nowine = 'A wine with that ID does not exist';
-                res.status(404).json(errors);
-            }
-            else {
-                res.status(404).json(err);
-            }
-        });
+  const errors = {};
+  const id = req.params.id;
+  RedWine.findById(id)
+      .then(wine => {
+        res.json(wine);
+      })
+      .catch((err) => {
+        if (err.varietal === 'CastError') {
+          errors.nowine = 'A wine with that ID does not exist';
+          res.status(404).json(errors);
+        }
+        else {
+          res.status(404).json(err);
+        }
+      });
 });
 
 module.exports = router;

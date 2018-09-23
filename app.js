@@ -33,5 +33,5 @@ const ip = "127.0.0.1";
 const port = 5000;
 
 app.listen(port, ip, () => {
-    console.log(`Server running... ${ip}:${port}`);
+  console.log(`Server running... ${ip}:${port}`);
 });

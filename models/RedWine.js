@@ -18,7 +18,7 @@ const RedWineSchema = new mongoose.Schema({
     // They are number based, where:
     // 0 = Not a common descriptor of the wine
     // 1 = Is a descriptor of a wine.
-    // 3 = Is a descriptor and a key indicator of a wine.
+    // 2 = Is a descriptor and a key indicator of a wine.
     descriptors: {
         colorGarnet: {
             type: Number,

@@ -20,10 +20,10 @@ router.get('/', (req, res) => {
 
     RedWine.find({})
         .then(redWines => {
-            if (!redWines) {
-                errors.nowinesfound = 'No Wines Found.';
-            } else {
+            if (!redWines.isEmpty()) {
                 res.json(redWines);
+            } else {
+                errors.nowinesfound = 'No Wines Found.';
             }
         })
         .catch((err) => {

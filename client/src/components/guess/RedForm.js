@@ -4,8 +4,6 @@ import RedWineFields from '../fields/RedWineFields';
 
 class RedForm extends Component {
   render() {
-
-
     return (
         <div className="container text-center">
           <h2 className="p-2">Select red wine characteristics.</h2>
@@ -36,7 +34,7 @@ class RedForm extends Component {
 
             <button type="submit" className="btn m-2">Guess</button>
           </form>
-          </div>
+        </div>
     );
   }
 }

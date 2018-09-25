@@ -8,7 +8,7 @@ const RedWineFields = {
     {value: 'tart', label: 'Tart'},
     {value: 'ripe', label: 'Ripe'},
     {value: 'overripe', label: 'Overripe'},
-    {value: 'baked', label: 'Baked'}
+    {value: 'baked', label: 'Baked, Dried'}
   ],
   type: [
     {value: 'red', label: 'Red'},
@@ -17,7 +17,7 @@ const RedWineFields = {
   ],
   nonFruit: [
     {value: 'floral', label: 'Floral'},
-    {value: 'vegetalPyrazine', label: 'Vegetal: Pyrazine (bell pepper, jalepeno)'},
+    {value: 'vegetalPyrazine', label: 'Vegetal: Pyrazine (bell pepper, jalepeño)'},
     {value: 'vegetalTomato', label: 'Vegetal: Tomato leaf'},
     {value: 'herbalTobacco', label: 'Herbal: Tobacco'},
     {value: 'herbalMint', label: 'Herbal: Mint, eucalyptus'},

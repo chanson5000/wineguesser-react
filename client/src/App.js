@@ -6,6 +6,7 @@ import Landing from './components/layout/Landing';
 import Footer from './components/layout/Footer';
 import RedForm from './components/guess/RedForm';
 import WhiteForm from './components/guess/WhiteForm';
+import About from './components/layout/About';
 
 import './App.css';
 
@@ -18,6 +19,7 @@ class App extends Component {
             <Route exact path="/" component={Landing}/>
             <Route exact path="/guess-red" component={RedForm}/>
             <Route exact path="/guess-white" component={WhiteForm}/>
+            <Route exact path="/about" component={About}/>
             <Footer/>
           </div>
         </Router>

@@ -41,6 +41,11 @@ header a:visited {
     color: black;
 }
 
+button {
+    background: #9c27b0;
+    color: white;
+}
+
 .wg-footer {
     color: black;
 }
@@ -65,10 +70,3 @@ header a:visited {
     background: #fce4ec;
 }
 
-.wg-background-red {
-
-}
-
-.wg-background-white {
-
-}

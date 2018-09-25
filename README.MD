@@ -3,6 +3,7 @@ I wanted to create a tool to help aspiring sommeliers in their blind tasting eff
 
 ## Website Deployment
 This version is currently not deployed. However, it will be replacing the following website.
+
 [WineGuesser.Com](https://wineguesser.com)
 
 ## Author
@@ -10,8 +11,11 @@ This version is currently not deployed. However, it will be replacing the follow
 
 ## Built With
 [Node](https://nodejs.org)
+
 [Express](https://expressjs.com)
+
 [React](https://reactjs.org)
+
 [MongoDB](https://www.mongodb.com)
 
 ## Features

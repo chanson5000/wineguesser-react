@@ -211,4 +211,4 @@ const RedWineSchema = new mongoose.Schema({
   }
 });
 
-module.exports.RedWine = mongoose.model("RedWine", RedWineSchema);
+module.exports.RedWine = mongoose.model("RedForm", RedWineSchema);

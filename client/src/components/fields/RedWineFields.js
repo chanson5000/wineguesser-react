@@ -38,7 +38,7 @@ const RedWineFields = {
     {value: 'oxidization', label: 'Oxidization'},
     {value: 'organic', label: 'Organic earth: Forest floor, wet leaves, mushrooms'},
     {value: 'inorganic', label: 'Inorganic earth: Stone, rock, mineral, sulfur'},
-    {value: 'newOak', label: 'New oak: Vanilla, smoke, toast, coconut'}
+    {value: 'oak', label: 'New oak: Vanilla, smoke, toast, coconut'}
   ],
   structure: [
     {value: 'moderateMinus', label: 'Moderate minus'},

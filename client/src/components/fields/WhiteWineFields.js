@@ -36,7 +36,7 @@ const WhiteWineFields = {
     {value: 'lees', label: 'Lees: Buttery, creamy'},
     {value: 'organic', label: 'Wet leaves, mushrooms'},
     {value: 'inorganic', label: 'Inorganic earth: Stone, rock, mineral, sulfur'},
-    {value: 'newOak', label: 'New oak: Vanilla, brown baking spices, smoke'},
+    {value: 'oak', label: 'New oak: Vanilla, brown baking spices, smoke'},
     {value: 'bitter', label: 'Bitter, phenolic'}
   ],
   sweetness: [

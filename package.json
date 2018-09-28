@@ -9,7 +9,7 @@
     "server": "nodemon app.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha && npm test --prefix client"
   },
   "repository": {
     "selectionType": "git",
@@ -30,6 +30,7 @@
     "validator": "^10.7.1"
   },
   "devDependencies": {
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.4"
   }
 }

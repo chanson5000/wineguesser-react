@@ -3,8 +3,8 @@ const RedWine = require('../models/RedWine').RedWine;
 const SanitizeDescriptorQueryObject = require('../util/SanitizeDescQuery').SanitizeDescQuery;
 const WineScore = require('../util/WineScore').WineScore;
 
-describe('SanitizeDescQuery', function () {
-  it('should equal array of key value pairs without invalid pair', function () {
+describe('SanitizeDescQuery', () => {
+  it('should equal array of key value pairs without invalid pair', () => {
     const expected = [['colorRuby', 1], ['colorPurple', 1]];
     const input = {colorRuby: 1, colorPurple: 1, notValid: 1};
 
@@ -14,8 +14,8 @@ describe('SanitizeDescQuery', function () {
   });
 });
 
-describe('WineScore', function () {
-  it('should equal object of highest score with score in object', function () {
+describe('WineScore', () => {
+  it('should equal object of highest score with score in object', () => {
     const expected = {
       score: 4,
       descriptors: {

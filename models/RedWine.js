@@ -12,7 +12,7 @@ const RedWineSchema = new mongoose.Schema({
   },
   description: String,
   notes: String,
-  commonConfusion: String,
+  confusion: String,
 
   // This is the structure of our descriptors unique to red wines.
   // They are number based, where:
@@ -152,11 +152,11 @@ const RedWineSchema = new mongoose.Schema({
       type: Number,
       default: 0
     },
-    tanninMod: {
+    tanninModerate: {
       type: Number,
       default: 0
     },
-    tanninModPlus: {
+    tanninModeratePlus: {
       type: Number,
       default: 0
     },
@@ -168,11 +168,11 @@ const RedWineSchema = new mongoose.Schema({
       type: Number,
       default: 0
     },
-    acidMod: {
+    acidModerate: {
       type: Number,
       default: 0
     },
-    acidModPlus: {
+    acidModeratePlus: {
       type: Number,
       default: 0
     },
@@ -184,11 +184,11 @@ const RedWineSchema = new mongoose.Schema({
       type: Number,
       default: 0
     },
-    alcoholMod: {
+    alcoholModerate: {
       type: Number,
       default: 0
     },
-    alcoholModPlus: {
+    alcoholModeratePlus: {
       type: Number,
       default: 0
     },
@@ -211,4 +211,4 @@ const RedWineSchema = new mongoose.Schema({
   }
 });
 
-module.exports.RedWine = mongoose.model("RedForm", RedWineSchema);
+module.exports.RedWine = mongoose.model("redwine", RedWineSchema);

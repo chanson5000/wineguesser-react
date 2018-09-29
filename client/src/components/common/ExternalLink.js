@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const RemoteLink = ({
+const ExternalLink = ({
   url, text, newWindow
 }) => {
   if (newWindow) {
@@ -15,10 +15,10 @@ const RemoteLink = ({
   }
 };
 
-RemoteLink.propTypes = {
+ExternalLink.propTypes = {
   url: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   newWindow: PropTypes.bool
 };
 
-export default RemoteLink;
+export default ExternalLink;

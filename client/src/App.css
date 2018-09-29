@@ -41,8 +41,9 @@ header a:visited {
     color: black;
 }
 
-button {
+.guess-btn {
     background: #9c27b0;
+    border: #9c27b0;
     color: white;
 }
 
@@ -69,4 +70,3 @@ button {
 .wg-color-background-primary {
     background: #fce4ec;
 }
-

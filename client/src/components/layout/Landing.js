@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import RedGuessLink from '../common/RedGuessLink';
-import WhiteGuessLink from '../common/WhiteGuessLink';
+import WineGlassLink from '../common/WineGlassLink';
 
 class Landing extends Component {
   render() {
@@ -9,10 +8,10 @@ class Landing extends Component {
           <h2>Guess a wine.</h2>
           <div className="row justify-content-center">
             <div className="col-auto">
-              <RedGuessLink/>
+              <WineGlassLink isRedWine={true}/>
             </div>
             <div className="col-auto">
-              <WhiteGuessLink/>
+              <WineGlassLink isRedWine={false}/>
             </div>
           </div>
         </div>

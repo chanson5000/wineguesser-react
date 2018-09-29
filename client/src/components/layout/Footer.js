@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
-import RemoteLink from '../common/RemoteLink';
-import AboutLink from '../common/AboutLink';
+import {Link} from 'react-router-dom';
+import ExternalLink from '../common/ExternalLink';
 
 class Footer extends Component {
   render() {
     return (
         <div className="container-fluid wg-footer text-center p-2">
           <footer className="p-2">
-            <AboutLink/>
+            <div>
+            <Link to="/about">
+              What is Wine Guesser?
+            </Link>
+            </div>
             &copy;{new Date().getFullYear()}&nbsp;
-            <RemoteLink
+            <ExternalLink
                 url="https://coryhanson.us"
                 text="Cory Hanson"
                 newWindow={true}/>

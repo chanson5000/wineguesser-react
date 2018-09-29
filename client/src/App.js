@@ -1,12 +1,6 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-
-import Header from './components/layout/Header';
-import Landing from './components/layout/Landing';
-import Footer from './components/layout/Footer';
-import RedForm from './components/guess/RedForm';
-import WhiteForm from './components/guess/WhiteForm';
-import About from './components/layout/About';
+import {Header, Landing, Footer, About, RedGuess, WhiteGuess} from './components/layout';
 
 import './App.css';
 
@@ -17,8 +11,8 @@ class App extends Component {
           <div className="App">
             <Header/>
             <Route exact path="/" component={Landing}/>
-            <Route exact path="/guess-red" component={RedForm}/>
-            <Route exact path="/guess-white" component={WhiteForm}/>
+            <Route exact path="/guess-red" component={RedGuess}/>
+            <Route exact path="/guess-white" component={WhiteGuess}/>
             <Route exact path="/about" component={About}/>
             <Footer/>
           </div>

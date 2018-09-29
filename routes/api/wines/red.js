@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 // const passport = require('passport');
 
 // Red Wine model
@@ -11,21 +11,18 @@ const SanitizeDescQuery = require('../../../util/SanitizeDescQuery').SanitizeDes
 // @route   GET api/wines/red/test
 // @desc    Test red wines route
 // @access  Public
-router.get('/test', (req, res) => res.json({msg: "This route works."}));
+router.get('/test', (req, res) => res.json({msg: 'This route works.'}));
 
 // @route   GET api/wines/red
 // @desc    Get all red wines
 // @access  Public
 
 router.get('/', (req, res) => {
-  const errors = {};
-
-  RedWine.find().then((redWines) => {
+  RedWine.find().lean().then((redWines) => {
     if (!redWines.isEmpty) {
       res.json(redWines);
     } else {
-      errors.nowinesfound = 'No Wines Found.';
-      res.json(errors);
+      res.json({errorMsg: 'No wines found.'});
     }
   }).catch((err) => {
     console.error(err);
@@ -41,18 +38,18 @@ router.get('/guess', (req, res) => {
   const queryValues = req.query;
   // Check if the query object is empty.
   if (Object.entries(queryValues).length === 0) {
-    res.json({errorMsg: "API request requires descriptor parameters."});
+    res.json({errorMsg: 'API request requires descriptor parameters.'});
     return;
   }
   RedWine.find().lean().then((redWines) => {
     const sanitizedQuery = SanitizeDescQuery(queryValues, true);
     if (Object.entries(sanitizedQuery).length === 0) {
-      res.json({errorMsg: "No descriptors were valid."});
+      res.json({errorMsg: 'No descriptors were valid.'});
       return;
     }
     const wineRecordWithHighestScore = WineScore(sanitizedQuery, redWines);
     if (Object.entries(wineRecordWithHighestScore).length === 0) {
-      res.json({errorMsg: "No wines matched the descriptors."});
+      res.json({errorMsg: 'No wines matched the descriptors.'});
     } else {
       res.json(wineRecordWithHighestScore);
     }
@@ -71,11 +68,10 @@ router.get('/:id', (req, res) => {
   RedWine.findById(id).then(wine => {
     res.json(wine);
   }).catch((err) => {
-    if (err.varietal === 'CastError') {
-      errors.nowine = 'A wine with that ID does not exist';
+    if (err.name === 'CastError') {
+      errors.noWine = 'A wine with that ID does not exist';
       res.status(404).json(errors);
-    }
-    else {
+    } else {
       res.status(404).json(err);
     }
   });
